@@ -4,7 +4,7 @@ using ConsolePresentation.Dialogs;
 using Microsoft.Extensions.DependencyInjection;
 
 var serviceCollection = new ServiceCollection();
-serviceCollection.AddSingleton<IFileService>(new FileService("user.json"));
+serviceCollection.AddSingleton((IFileService)new FileService("data", "user.json"));
 serviceCollection.AddTransient<IUserService, UserService>();
 serviceCollection.AddTransient<MenuDialogs>();
 

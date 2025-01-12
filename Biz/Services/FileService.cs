@@ -8,9 +8,9 @@ public class FileService : IFileService
     private readonly string _directoryPath;
     private readonly string _filePath;
 
-    public FileService(string fileName)
+    public FileService(string directoryPath, string fileName)
     {
-        _directoryPath = "Data";
+        _directoryPath = directoryPath;
         _filePath = Path.Combine(_directoryPath, fileName);
     }
 
